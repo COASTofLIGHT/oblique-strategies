@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oblique Strategies</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    #strategy {
+      font-size: 1.8rem;
+      line-height: 1.4;
+      max-width: 100%;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    button:active {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="strategy">Tap the button for a strategy</div>
+  <button onclick="newStrategy()">New Strategy</button>
+
+  <script>
+    const strategies = [
+      "Abandon normal instruments",
+      "Accept advice",
+      "A line has two sides",
+      "Ask your body",
+      "Balance the consistency principle with the inconsistency principle",
+      "Be dirty",
+      "Breathe more deeply",
+      "Bridges – build – burn",
+      "Change instrument roles",
+      "Change nothing and continue with immaculate consistency",
+      "Children’s voices – speaking – singing",
+      "Cluster analysis",
+      "Convert a melodic element into a rhythmic element",
+      "Courage!",
+      "Cut a vital connection",
+      "Define an area as 'safe' and use it as an anchor",
+      "Destroy – nothing – the most important thing",
+      "Discard an axiom",
+      "Disconnect from desire",
+      "Do nothing for as long as possible",
+      "Don’t be afraid of things because they’re easy to do",
+      "Don’t be frightened of clichés",
+      "Do something boring",
+      "Do the washing up",
+      "Do the words need changing?",
+      "Emphasize differences",
+      "Emphasize repetitions",
+      "Emphasize the flaws",
+      "Faced with a choice, do both",
+      "Honor thy error as a hidden intention",
+      "How would you have done it?",
+      "Imagine the music as a moving chain or caterpillar",
+      "Overtly resist change",
+      "Put in earplugs",
+      "Remove specifics and convert to ambiguities",
+      "Repetition is a form of change",
+      "Reverse",
+      "Take a break",
+      "Trust in the you of now",
+      "Use an unacceptable color",
+      "Use filters",
+      "What would your closest friend do?",
+      "What to increase? What to reduce?",
+      "What are you really thinking about just now?",
+      "What mistakes did you make last time?"
+    ];
+
+    function newStrategy() {
+      const strategy = strategies[Math.floor(Math.random() * strategies.length)];
+      document.getElementById("strategy").textContent = strategy;
+    }
+  </script>
+</body>
+</html>
